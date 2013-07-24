@@ -1,0 +1,150 @@
+.character-container {
+	width: 80px; height: 80px;
+	position: absolute;
+}
+
+.character { 
+	width: 80px; height: 80px; /* exactly the size of an image in our sprite */
+}
+
+.male-001 {
+  top: 80px;
+  left: 100px;
+}
+
+.male-001 .character {
+  background-image: url('../img/avatar-sprites/male-001.png');
+}
+
+.male-002 {
+  top: 80px;
+  left: 300px;
+}
+
+.male-002 .character {
+  background-image: url('../img/avatar-sprites/male-002.png');
+}
+
+.male-003 {
+  top: 80px;
+  left: 600px;
+}
+
+.male-003 .character {
+  background-image: url('../img/avatar-sprites/male-003.png');
+}
+
+
+.female-001 {  
+  top: 80px;
+  left: 200px;
+}
+
+.female-001 .character {
+  background-image: url('../img/avatar-sprites/female-001.png');
+}
+
+.female-002 {  
+  top: 80px;
+  left: 400px;
+}
+
+.female-002 .character {
+  background-image: url('../img/avatar-sprites/female-002.png');
+}
+
+.female-003 {  
+  top: 80px;
+  left: 700px;
+}
+
+.female-003 .character {
+  background-image: url('../img/avatar-sprites/female-003.png');
+}
+
+.other-001 {  
+  top: 80px;
+  left: 500px;
+}
+
+.other-001 .character {
+  background-image: url('../img/avatar-sprites/other-001.png');
+}
+
+.other-002 {  
+  top: 80px;
+  left: 800px;
+}
+
+.other-002 .character {
+  background-image: url('../img/avatar-sprites/other-002.png');
+}
+
+
+
+/************************************************** STAND */
+.stand { 
+	-webkit-animation: stand 3s steps(6) infinite;
+}
+
+@-webkit-keyframes stand {
+  0% { background-position: 0px 0px; }
+  100% { background-position: -480px 0px; }
+}
+
+
+
+/************************************************** WALK */
+.walk { 
+  -webkit-animation: walk .5s steps(4) infinite;
+}
+
+@-webkit-keyframes walk {
+  0% { background-position: 0px -80px; }
+  100% { background-position: -320px -80px; }
+}
+
+
+/************************************************** RAISE HAND */
+.raise-hand { 
+	background-position: -320px -160px; /* Sets the hand-up state as the background so it remains up after the animation */
+  -webkit-animation: raise-hand .5s steps(6) 1;
+}
+
+@-webkit-keyframes raise-hand  {
+  0% { background-position: 0px -160px; }
+  100% { background-position: -480px -160px; }
+}
+
+.lower-hand { 
+	-webkit-animation: lower-hand .5s steps(5) 1 reverse;
+}
+
+@-webkit-keyframes lower-hand  {
+  0% { background-position: 0px -160px; }
+  100% { background-position: -400px -160px; }
+}
+
+
+/************************************************** DANCE */
+.dance { 
+  -webkit-animation: dance .5s steps(4) infinite;
+}
+
+@-webkit-keyframes dance {
+  0% { background-position: 0px -240px; }
+  100% { background-position: -320px -240px; }
+}
+
+
+
+
+/************************************************** MOVE */
+.move {
+	-webkit-animation: move 1s linear infinite alternate;
+}
+
+@-webkit-keyframes move {
+  0% { -webkit-transform:translateX(0%); }
+  100% { -webkit-transform:translateX(100%); }
+}

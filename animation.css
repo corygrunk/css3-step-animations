@@ -1,0 +1,83 @@
+.character-container {
+	width: 80px; height: 80px;
+	position: absolute;
+}
+
+.character {
+	width: 80px; height: 80px; /* exactly the size of an image in our sprite */
+}
+
+.male-001 {
+  top: 200px;
+  left: 200px;
+}
+
+.male-001 .character {
+  background-image: url('../img/avatar-sprites/male-001.png');
+}
+
+.female-001 {  
+  top: 200px;
+  left: 300px;
+}
+
+.female01 .character {
+  background-image: url('../img/avatar-sprites/female-001.png');
+  background-position: 0 0;
+  background-color: red;
+}
+
+
+/************************************************** STAND */
+.stand { 
+	-webkit-animation: stand 1.5s steps(6);
+}
+
+@-webkit-keyframes stand {
+  0% { background-position: 0px 0px; }
+  100% { background-position: -480px 0px; }
+}
+
+
+
+/************************************************** WALK */
+.walk { 
+  -webkit-animation: walk .5s steps(4) infinite;
+}
+
+@-webkit-keyframes walk {
+  0% { background-position: 0px -80px; }
+  100% { background-position: -320px -80px; }
+}
+
+
+/************************************************** RAISE HAND */
+.raise-hand { 
+	background-position: -320px -160px; /* Sets the hand-up state as the background so it remains up after the animation */
+  -webkit-animation: raise-hand .5s steps(5) 1;
+}
+
+@-webkit-keyframes raise-hand  {
+  0% { background-position: 0px -160px; }
+  100% { background-position: -400px -160px; }
+}
+
+.lower-hand { 
+	-webkit-animation: lower-hand .5s steps(5) 1 reverse;
+}
+
+@-webkit-keyframes lower-hand  {
+  0% { background-position: 0px -160px; }
+  100% { background-position: -400px -160px; }
+}
+
+
+/************************************************** MOVE */
+.move {
+	-webkit-animation: move 1s linear infinite alternate;
+}
+
+@-webkit-keyframes move {
+  0% { -webkit-transform:translateX(0%); }
+  100% { -webkit-transform:translateX(100%); }
+}
