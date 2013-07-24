@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackathon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="css/main-styles.css" rel="stylesheet" media="screen">
+    <link href="css/animations.css" rel="stylesheet" media="screen">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript">                                         
+      $(document).ready(function() {
+        $('.stand-button').click(function() {
+          $('.character').addClass('stand');
+          setTimeout(function() {
+              $('.character').removeClass('stand');
+          }, 9000);
+        });
+
+        $('.walk-button').click(function() {
+          $('.character').addClass('walk');
+          $('.character-container').addClass('move');
+          setTimeout(function() {
+              $('.character').removeClass('walk');
+              $('.character-container').removeClass('move');
+          }, 4000);
+        });
+
+        $('.hand-button').mousedown(function() {
+          $('.character').addClass('raise-hand');
+          setTimeout(function() {
+              $('.character').removeClass('raise-hand');
+              $('.character').addClass('lower-hand');
+                setTimeout(function() {
+                $('.character').removeClass('lower-hand');
+            }, 3000);
+          }, 3000);
+        });
+
+        $('.dance-button').mousedown(function() {
+          $('.character').addClass('dance');
+          setTimeout(function() {
+              $('.character').removeClass('dance');
+          }, 3000);
+        });
+
+      });          
+    </script> 
+
+
+  </head>
+  
+  <body>
+
+    <div class="crowd-stage">
+
+      <div class="character-container male-001">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container male-002">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container male-003">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container female-001">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container female-002">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container female-003">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container other-001">
+        <div class="character"></div>
+      </div>
+
+      <div class="character-container other-002">
+        <div class="character"></div>
+      </div>
+
+      <div class="test-buttons">
+        <button class="stand-button">Stand</button>
+        <button class="walk-button">Walk</button>
+        <button class="hand-button">Raise Hand</button>
+        <button class="dance-button">Dance</button>
+      </div>
+    </div>
+
+  </body>
+</html>
